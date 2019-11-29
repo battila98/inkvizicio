@@ -1,0 +1,53 @@
+Inkvizicio
+	
+	szemely
+		id: int AI		
+		nev: varchar 60
+		kor: int 
+		suly: int
+		magassag: int 
+	
+	allapot
+		id: int AI
+		szemely_id: int --idegen kulcs szemely id
+		allapot: varchar 150
+
+	bun
+		id: int AI
+		szemely_id: int --idegen kulcs szemely id
+		bun: varchar 150
+
+	vallatasi_ido
+		id: int AI
+		szemely_id: int --idegen kulcs szemely id
+	*	kezdete: date time
+	*	idotartam: date time 
+
+	modszer
+		id: int AI
+		szemely_id: int idegen kulcs szemely id
+		modszer: varchar 150
+
+	eredmeny
+		id: int AI
+		szemely_id: int idegen kulcs szemely id
+		eredmeny: varchar 100
+
+	intezkedes
+		id: int AI
+		szemely_id: int idegen kulcs szemely id
+		intezkedes: varchar 100
+
+Update: 
+	update szemely
+	SET nev = 'Gipsz Jakab', suly =  69
+	WHERE id = 1
+Insert: 
+	INSERT INTO szemely (id, nev, kor, suly, magassag)
+	VALUES ('55','Borsika Örzsébet','46','69','162')
+Delete:
+	DELETE FROM szemely 
+	WHERE id = 2
+		
+		
+		 
